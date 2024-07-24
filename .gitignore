@@ -1,0 +1,9 @@
+node_modules
+bundle.js
+dist/static
+release
+.env
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
