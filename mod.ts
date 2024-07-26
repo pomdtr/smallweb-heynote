@@ -1,4 +1,4 @@
-import { Hono } from "@hono/hono";
+import { Hono } from "./deps.ts";
 import embed from "./embed/mod.ts";
 
 export type HeynoteOptions = {
@@ -37,7 +37,7 @@ export class Heynote {
         app.get(
             "*",
             (c) => {
-                return embeds.serve(c.req.raw);
+                return embed.serve(c.req.raw);
             },
         );
 
