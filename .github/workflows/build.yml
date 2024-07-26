@@ -22,5 +22,5 @@ jobs:
         with:
             node-version: 18
 
-      - run: deno task install && deno task build
+      - run: deno task install-deps && deno task build
       - run: npx jsr publish
