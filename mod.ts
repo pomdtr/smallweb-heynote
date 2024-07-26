@@ -1,4 +1,4 @@
-import { Hono } from "./deps.ts";
+import { Hono } from "@hono/hono";
 import embed from "./embed/mod.ts";
 
 export type HeynoteOptions = {
@@ -8,7 +8,7 @@ export type HeynoteOptions = {
 export class Heynote {
     constructor(public options: HeynoteOptions = {}) {}
 
-    get filepath() {
+    get filepath(): string {
         return this.options.filepath || "heynote.txt";
     }
 

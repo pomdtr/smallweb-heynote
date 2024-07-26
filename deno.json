@@ -1,7 +1,22 @@
 {
+  "version": "0.0.1",
+  "name": "@pomdtr/heynote",
+  "exports": {
+    ".": "./mod.ts"
+  },
   "tasks": {
     "build-frontend": "npm run --prefix frontend build",
     "embed": "deno run -A jsr:@smallweb/embed@0.0.14 frontend/dist embed",
     "build": "deno task build-frontend && deno task embed"
+  },
+  "imports": {
+    "@hono/hono": "jsr:@hono/hono@^4.5.1"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "embed",
+      "mod.ts"
+    ]
   }
 }
