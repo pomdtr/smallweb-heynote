@@ -8,10 +8,6 @@ import * as child from "child_process";
 // https://vitejs.dev/config/
 export default defineConfig({
     publicDir: "./public",
-    build: {
-        outDir: "./dist/static"
-    },
-
     plugins: [
         vue(),
     ],

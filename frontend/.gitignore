@@ -1,6 +1,5 @@
 node_modules
 bundle.js
-dist/static
 release
 .env
 /test-results/

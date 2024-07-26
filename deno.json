@@ -1,0 +1,10 @@
+{
+  "imports": {
+    "@hono/hono": "jsr:@hono/hono@^4.5.1"
+  },
+  "tasks": {
+    "build-frontend": "npm run --prefix frontend build",
+    "embed": "deno run -A jsr:@smallweb/embed@0.0.14 frontend/dist embed",
+    "build": "deno task build-frontend && deno task embed"
+  }
+}
