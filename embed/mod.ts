@@ -1,4 +1,4 @@
-import { Embeds } from "jsr:@smallweb/embed@0.0.14/embed";
+import { Embeds } from "jsr:@smallweb/embed@0.0.15/embed";
 
 const embeds = new Embeds({
   "about.html": () => import("./_about.html.ts"),
@@ -32,8 +32,8 @@ const embeds = new Embeds({
   "assets/hack-italic-97f12dc5.woff2": () => import("./assets/_hack-italic-97f12dc5.woff2.ts"),
   "assets/hack-regular-0b0ef254.woff2": () => import("./assets/_hack-regular-0b0ef254.woff2.ts"),
   "assets/hack-regular-89c2afca.woff": () => import("./assets/_hack-regular-89c2afca.woff.ts"),
-  "assets/index-20ee6af1.js": () => import("./assets/_index-20ee6af1.js.ts"),
   "assets/index-b9243596.css": () => import("./assets/_index-b9243596.css.ts"),
+  "assets/index-eebd6a7b.js": () => import("./assets/_index-eebd6a7b.js.ts"),
   "assets/settings-8b0b175a.svg": () => import("./assets/_settings-8b0b175a.svg.ts"),
   "assets/update-98491067.svg": () => import("./assets/_update-98491067.svg.ts"),
   "favicon-linux.png": () => import("./_favicon-linux.png.ts"),

@@ -1,4 +1,4 @@
-import type { FileMeta } from "jsr:@smallweb/embed@0.0.14/embed";
+import type { FileMeta } from "jsr:@smallweb/embed@0.0.15/embed";
 
 export default {
  size: 53076,
@@ -595,6 +595,4 @@ Jjd8svsv++v+7hN93Fck4OESijdPjHzISa9p5B9fr7IajPS1Z2ou8TOgzanyTt8olOwLBZOCxMx0daAa
 EzEWoHeMbf7fiurXkKtC052HX8PbI14DFrcCsQUaZynWQmzBOO+bLH+IcCbUQ8AZwUaCZ0AaiBsmGJ4mHlpEGRFFl/5vj3EO74bIdSX+rxO+5rK0yf+mwS+E
 aXVcmm4BM60gNlTPAAA=`,
  eTag: `"cf54-kFbIVIuM/AiDcaPbBiFlw9ZphJb"`,
- atime: new Date(1721995429906),
- mtime: new Date(1721995429907),
 } satisfies FileMeta;

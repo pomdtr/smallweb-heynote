@@ -7,7 +7,7 @@
   "tasks": {
     "install-deps": "npm install --prefix frontend",
     "build-frontend": "npm run --prefix frontend build",
-    "embed": "deno run -A jsr:@smallweb/embed@0.0.14 frontend/dist embed",
+    "embed": "deno run -A jsr:@smallweb/embed@0.0.15 frontend/dist embed",
     "build": "deno task build-frontend && deno task embed"
   },
   "imports": {

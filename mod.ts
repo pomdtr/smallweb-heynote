@@ -1,36 +1,24 @@
 import { Hono } from "@hono/hono";
 import embed from "./embed/mod.ts";
 
-export type HeynoteOptions = {
-    filepath?: string;
-};
-
 export class Heynote {
-    constructor(public options: HeynoteOptions = {}) {}
-
-    get filepath(): string {
-        return this.options.filepath || "heynote.txt";
-    }
+    constructor() {}
 
     fetch = (req: Request): Response | Promise<Response> => {
         const app = new Hono();
 
-        app.get("/api/load", async () => {
-            try {
-                const text = await Deno.readTextFile(this.filepath);
-                return new Response(text, {
-                    headers: {
-                        "Content-Type": "text/plain",
-                    },
-                });
-            } catch (_) {
-                return new Response(null, { status: 204 });
-            }
+        app.get("/api/buffer", () => {
+            const text = localStorage.getItem("note") || "";
+            return new Response(text, {
+                headers: {
+                    "content-type": "text/plain",
+                },
+            });
         });
 
-        app.get("/api/save", async (c) => {
+        app.post("/api/buffer", async (c) => {
             const text = await c.req.text();
-            await Deno.writeTextFile(this.filepath, text);
+            localStorage.setItem("note", text);
             return new Response(null, { status: 204 });
         });
 
