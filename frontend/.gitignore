@@ -1,6 +1,8 @@
 node_modules
 bundle.js
 release
+dist
+dist-ssr
 .env
 /test-results/
 /playwright-report/
